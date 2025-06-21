@@ -23,6 +23,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { NavBarDemo } from "@/components/NavBarDemo";
+import { ModeToggle } from "@/components/ui/theme-toggle";
+import { Logos3Demo } from "@/components/demos/Logos3Demo";
 
 const Index = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -136,6 +138,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <div className="fixed top-4 right-4 z-50">
+        <ModeToggle />
+      </div>
       <NavBarDemo />
       {/* New Hero Section */}
       <HeroSection
@@ -147,10 +152,6 @@ const Index = () => {
         description="DigiSetu is India's next-gen payment gateway built for speed, trust, and scale. Seamlessly connect businesses with customers through secure digital payments."
         ctaText="Get Started Free"
         ctaHref="#"
-        bottomImage={{
-          light: "https://farmui.vercel.app/dashboard-light.png",
-          dark: "https://farmui.vercel.app/dashboard.png",
-        }}
         gridOptions={{
           angle: 65,
           opacity: 0.3,
@@ -159,6 +160,8 @@ const Index = () => {
           darkLineColor: "#374151",
         }}
       />
+
+      <Logos3Demo />
 
       {/* Product Features */}
       <section className="py-20 px-4">
