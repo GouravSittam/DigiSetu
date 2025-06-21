@@ -24,7 +24,10 @@ import {
 } from "@/components/ui/carousel";
 import { NavBarDemo } from "@/components/NavBarDemo";
 import { ModeToggle } from "@/components/ui/theme-toggle";
-import { Logos3Demo } from "@/components/demos/Logos3Demo";
+import { BrandScroller, BrandScrollerReverse } from "@/components/ui/brand-scroller";
+import { BentoGridDemo } from "@/components/demos/BentoGridDemo";
+import { PricingDemo } from "@/components/demos/PricingDemo";
+import { FooterDemo } from "@/components/demos/FooterDemo";
 
 const Index = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -161,10 +164,20 @@ const Index = () => {
         }}
       />
 
-      <Logos3Demo />
+      <section className="py-20">
+        <div className="container mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-16 text-gray-900 dark:text-gray-100">
+                Trusted by Industry Leaders
+            </h2>
+            <BrandScroller />
+            <BrandScrollerReverse />
+        </div>
+      </section>
+
+      <BentoGridDemo />
 
       {/* Product Features */}
-      <section className="py-20 px-4">
+      {/* <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
@@ -193,10 +206,10 @@ const Index = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* How It Works */}
-      <section className="py-20 px-4 bg-gray-50">
+      {/* <section className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
@@ -224,10 +237,10 @@ const Index = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials */}
-      <section className="py-20 px-4">
+      {/* <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
@@ -265,62 +278,12 @@ const Index = () => {
             <CarouselNext />
           </Carousel>
         </div>
-      </section>
+      </section> */}
 
-      {/* Pricing Plans */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-xl text-gray-600">
-              Choose the plan that fits your business needs
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <Card key={index} className={`relative ${plan.popular ? 'border-2 border-orange-500 scale-105' : 'border-0'} shadow-lg`}>
-                {plan.popular && (
-                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-orange-500">
-                    Most Popular
-                  </Badge>
-                )}
-                <CardHeader className="text-center pb-6">
-                  <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                  <div className="mt-4">
-                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                    <span className="text-gray-600">{plan.period}</span>
-                  </div>
-                  <CardDescription className="mt-2 text-base">
-                    {plan.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button 
-                    className={`w-full ${plan.popular ? 'bg-orange-500 hover:bg-orange-600' : ''}`}
-                    variant={plan.popular ? 'default' : 'outline'}
-                  >
-                    {plan.cta}
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PricingDemo />
 
       {/* Trust Section */}
-      <section className="py-20 px-4">
+      {/* <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
@@ -367,62 +330,9 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            <div>
-              <h3 className="text-2xl font-bold mb-4 text-orange-400">DigiSetu</h3>
-              <p className="text-gray-400 leading-relaxed">
-                Bridging India's digital payment ecosystem with secure, fast, and reliable solutions.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Product</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Features</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">API Docs</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Support</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Security</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Compliance</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <Separator className="my-8 bg-gray-800" />
-          
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 mb-4 md:mb-0">
-              © 2024 DigiSetu. All rights reserved.
-            </p>
-            <p className="text-gray-400 flex items-center">
-              Proudly built in 🇮🇳 India
-            </p>
-          </div>
-        </div>
-      </footer>
+      <FooterDemo />
     </div>
   );
 };
