@@ -28,6 +28,7 @@ import { BrandScroller, BrandScrollerReverse } from "@/components/ui/brand-scrol
 import { BentoGridDemo } from "@/components/demos/BentoGridDemo";
 import { PricingDemo } from "@/components/demos/PricingDemo";
 import { FooterDemo } from "@/components/demos/FooterDemo";
+import { TestimonialsDemo } from "@/components/demos/TestimonialsDemo";
 
 const Index = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -281,6 +282,8 @@ const Index = () => {
       </section> */}
 
       <PricingDemo />
+
+      <TestimonialsDemo />
 
       {/* Trust Section */}
       {/* <section className="py-20 px-4">

@@ -1,6 +1,7 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 import { ChevronRight } from "lucide-react"
+import { HandWrittenTitle } from "./hand-writing-text"
 
 interface HeroSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string
@@ -87,12 +88,12 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                 {title}
                 <ChevronRight className="inline w-4 h-4 ml-2 group-hover:translate-x-1 duration-300" />
               </h1>
-              <h2 className="text-4xl tracking-tighter font-geist bg-clip-text text-transparent mx-auto md:text-6xl bg-[linear-gradient(180deg,_#000_0%,_rgba(0,_0,_0,_0.75)_100%)] dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
-                {subtitle.regular}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200">
-                  {subtitle.gradient}
-                </span>
-              </h2>
+              <div className="py-8">
+                <HandWrittenTitle 
+                  title={subtitle.regular}
+                  subtitle={subtitle.gradient}
+                />
+              </div>
               <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
                 {description}
               </p>

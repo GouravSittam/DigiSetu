@@ -18,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			maxWidth: {
+				container: "1280px",
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
