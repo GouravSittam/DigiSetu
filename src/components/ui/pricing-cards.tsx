@@ -93,44 +93,31 @@ function Pricing() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="flex flex-col gap-6 sm:gap-8 justify-start">
+                <div className="relative flex flex-col gap-6 sm:gap-8 justify-start">
+                  <span className="absolute -top-4 right-4 bg-gradient-to-r from-pink-400 to-purple-400 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg animate-bounce">
+                    Most Popular
+                  </span>
                   <p className="flex flex-row items-center gap-2 text-lg sm:text-xl">
-                    <span className="text-3xl sm:text-4xl">$40</span>
-                    <span className="text-sm text-muted-foreground">
-                      {" "}
-                      / month
-                    </span>
+                    <span className="text-3xl sm:text-4xl animate-pulse">$40</span>
+                    <span className="text-sm text-muted-foreground">/ month</span>
                   </p>
-                  <div className="flex flex-col gap-3 sm:gap-4 justify-start">
-                    <div className="flex flex-row gap-3 sm:gap-4">
-                      <Check className="w-4 h-4 mt-1 sm:mt-2 text-primary flex-shrink-0" />
-                      <div className="flex flex-col">
-                        <p className="text-sm sm:text-base">Fast and reliable</p>
-                        <p className="text-muted-foreground text-xs sm:text-sm">
-                          We&apos;ve made it fast and reliable.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex flex-row gap-3 sm:gap-4">
-                      <Check className="w-4 h-4 mt-1 sm:mt-2 text-primary flex-shrink-0" />
-                      <div className="flex flex-col">
-                        <p className="text-sm sm:text-base">Fast and reliable</p>
-                        <p className="text-muted-foreground text-xs sm:text-sm">
-                          We&apos;ve made it fast and reliable.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex flex-row gap-3 sm:gap-4">
-                      <Check className="w-4 h-4 mt-1 sm:mt-2 text-primary flex-shrink-0" />
-                      <div className="flex flex-col">
-                        <p className="text-sm sm:text-base">Fast and reliable</p>
-                        <p className="text-muted-foreground text-xs sm:text-sm">
-                          We&apos;ve made it fast and reliable.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <Button className="gap-2 sm:gap-4 text-sm sm:text-base py-2 sm:py-3">
+                  <ul className="flex flex-col gap-3 sm:gap-4">
+                    {[
+                      "Unlimited transactions",
+                      "Advanced analytics",
+                      "Priority support",
+                      "Custom webhooks",
+                      "Multi-user dashboard"
+                    ].map((feature, idx) => (
+                      <li key={feature} className="flex items-center gap-2">
+                        <span className="inline-block w-5 h-5 bg-green-400 rounded-full flex items-center justify-center text-white animate-bounce">
+                          ✓
+                        </span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button className="gap-2 sm:gap-4 text-sm sm:text-base py-2 sm:py-3 hover:scale-105 transition-transform">
                     Sign up today <MoveRight className="w-3 h-3 sm:w-4 sm:h-4" />
                   </Button>
                 </div>
