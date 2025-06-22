@@ -69,8 +69,8 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
       ctaText = "Browse courses",
       ctaHref = "#",
       bottomImage = {
-        light: "/lovable-uploads/6394ca67-8f96-4bfe-8264-02756c7ca75a.png",
-        dark: "/lovable-uploads/6394ca67-8f96-4bfe-8264-02756c7ca75a.png",
+        light: "",
+        dark: "",
       },
       gridOptions,
       ...props
