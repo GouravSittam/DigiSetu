@@ -35,24 +35,24 @@ export const Footer = React.forwardRef<HTMLDivElement, FooterProps>(
     return (
       <div
         ref={ref}
-        className={cn("pt-24", className)}
+        className={cn("pt-12 sm:pt-16 lg:pt-24", className)}
         {...props}
       >
-        <div className="max-w-screen-xl mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
-              <a href="#" className="text-xl font-semibold">
+              <a href="#" className="text-lg sm:text-xl font-semibold">
                 {brand.name}
               </a>
-              <p className="text-sm text-foreground/60">
+              <p className="text-sm text-foreground/60 mt-2 sm:mt-3">
                 {brand.description}
               </p>
 
-              <p className="text-sm font-light text-foreground/55 mt-3.5">
+              <p className="text-xs sm:text-sm font-light text-foreground/55 mt-3 sm:mt-4">
                 {socialLinks.map((link, index) => (
-                  <React.Fragment key={link.name}>
+                  <span key={link.name}>
                     <a
-                      className="hover:text-foreground/90"
+                      className="hover:text-foreground/90 transition-colors"
                       target="_blank"
                       href={link.href}
                       rel="noopener noreferrer"
@@ -60,23 +60,23 @@ export const Footer = React.forwardRef<HTMLDivElement, FooterProps>(
                       {link.name}
                     </a>
                     {index < socialLinks.length - 1 && " • "}
-                  </React.Fragment>
+                  </span>
                 ))}
               </p>
             </div>
 
-            <div className="grid grid-cols-2 mt-16 md:grid-cols-3 lg:col-span-8 lg:justify-items-end lg:mt-0">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-12 lg:col-span-8 lg:justify-items-end">
               {columns.map(({ title, links }) => (
-                <div key={title} className="last:mt-12 md:last:mt-0">
-                  <h3 className="text-sm font-semibold">{title}</h3>
-                  <ul className="mt-4 space-y-2.5">
+                <div key={title} className="last:mt-8 sm:last:mt-0">
+                  <h3 className="text-sm font-semibold mb-3 sm:mb-4">{title}</h3>
+                  <ul className="space-y-2 sm:space-y-2.5">
                     {links.map(({ name, Icon, href }) => (
                       <li key={name}>
                         <a
                           href={href || "#"}
-                          className="text-sm transition-all text-foreground/60 hover:text-foreground/90 group"
+                          className="text-xs sm:text-sm transition-all text-foreground/60 hover:text-foreground/90 group flex items-center"
                         >
-                          <Icon className="inline stroke-2 h-4 mr-1.5 transition-all stroke-foreground/60 group-hover:stroke-foreground/90" />
+                          <Icon className="inline stroke-2 h-3 w-3 sm:h-4 sm:w-4 mr-1.5 transition-all stroke-foreground/60 group-hover:stroke-foreground/90 flex-shrink-0" />
                           {name}
                         </a>
                       </li>
@@ -88,8 +88,8 @@ export const Footer = React.forwardRef<HTMLDivElement, FooterProps>(
           </div>
 
           {copyright && (
-            <div className="mt-20 border-t pt-6 pb-8">
-              <p className="text-xs text-foreground/55">{copyright}</p>
+            <div className="mt-12 sm:mt-16 lg:mt-20 border-t pt-4 sm:pt-6 pb-6 sm:pb-8">
+              <p className="text-xs text-foreground/55 text-center sm:text-left">{copyright}</p>
             </div>
           )}
         </div>

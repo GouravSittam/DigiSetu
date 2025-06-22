@@ -23,7 +23,7 @@ function HandWrittenTitle({
     };
 
     return (
-        <div className="relative w-full max-w-4xl mx-auto py-8">
+        <div className="relative w-full max-w-4xl mx-auto py-4 sm:py-6 lg:py-8 px-4 sm:px-6">
             <div className="absolute inset-0">
                 <motion.svg
                     width="100%"
@@ -41,7 +41,7 @@ function HandWrittenTitle({
                            C 150 60, 350 40, 600 40
                            C 850 40, 950 90, 950 90"
                         fill="none"
-                        strokeWidth="8"
+                        strokeWidth="6"
                         stroke="currentColor"
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -52,7 +52,7 @@ function HandWrittenTitle({
             </div>
             <div className="relative text-center z-10 flex flex-col items-center justify-center">
                 <motion.h1
-                    className="text-4xl md:text-6xl text-black dark:text-white tracking-tighter flex items-center gap-2"
+                    className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-black dark:text-white tracking-tighter flex items-center gap-1 sm:gap-2 leading-tight"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5, duration: 0.8 }}
@@ -61,7 +61,7 @@ function HandWrittenTitle({
                 </motion.h1>
                 {subtitle && (
                     <motion.p
-                        className="text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200"
+                        className="text-lg sm:text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200 mt-2 sm:mt-3 leading-tight"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1, duration: 0.8 }}

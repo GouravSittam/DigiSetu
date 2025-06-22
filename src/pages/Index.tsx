@@ -146,28 +146,31 @@ const Index = () => {
         <ModeToggle />
       </div>
       <NavBarDemo />
-      {/* New Hero Section */}
-      <HeroSection
-        title="🇮🇳 Made in India • Trusted by 1000+ businesses"
-        subtitle={{
-          regular: "Bridging Bharat Digitally — ",
-          gradient: "One Payment at a Time",
-        }}
-        description="DigiSetu is India's next-gen payment gateway built for speed, trust, and scale. Seamlessly connect businesses with customers through secure digital payments."
-        ctaText="Get Started Free"
-        ctaHref="#"
-        gridOptions={{
-          angle: 65,
-          opacity: 0.3,
-          cellSize: 60,
-          lightLineColor: "#e5e7eb",
-          darkLineColor: "#374151",
-        }}
-      />
+      
+      {/* Home Section */}
+      <section id="home">
+        <HeroSection
+          title="🇮🇳 Made in India • Trusted by 1000+ businesses"
+          subtitle={{
+            regular: "Bridging Bharat Digitally — ",
+            gradient: "One Payment at a Time",
+          }}
+          description="DigiSetu is India's next-gen payment gateway built for speed, trust, and scale. Seamlessly connect businesses with customers through secure digital payments."
+          ctaText="Get Started Free"
+          ctaHref="#"
+          gridOptions={{
+            angle: 65,
+            opacity: 0.3,
+            cellSize: 60,
+            lightLineColor: "#e5e7eb",
+            darkLineColor: "#374151",
+          }}
+        />
+      </section>
 
-      <section className="py-20">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-16 text-gray-900 dark:text-gray-100">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 sm:mb-12 lg:mb-16 text-gray-900 dark:text-gray-100">
                 Trusted by Industry Leaders
             </h2>
             <BrandScroller />
@@ -175,165 +178,20 @@ const Index = () => {
         </div>
       </section>
 
-      <BentoGridDemo />
+      {/* Features Section */}
+      <section id="features">
+        <BentoGridDemo />
+      </section>
 
-      {/* Product Features */}
-      {/* <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Powerful Features for Modern Businesses
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Everything you need to accept payments online, built with Indian businesses in mind.
-            </p>
-          </div>
+      {/* Solutions Section */}
+      <section id="solutions">
+        <TestimonialsDemo />
+      </section>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
-                <CardHeader>
-                  <div className="mx-auto w-16 h-16 bg-gradient-to-br from-orange-100 to-blue-100 rounded-2xl flex items-center justify-center mb-4">
-                    <feature.icon className="h-8 w-8 text-orange-500" />
-                  </div>
-                  <CardTitle className="text-lg">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base leading-relaxed">
-                    {feature.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-      {/* How It Works */}
-      {/* <section className="py-20 px-4 bg-gray-50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Get Started in 3 Simple Steps
-            </h2>
-            <p className="text-xl text-gray-600">
-              From signup to your first payment in under 30 minutes
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {howItWorks.map((step, index) => (
-              <div key={index} className="text-center relative">
-                <div className="mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">{step.step}</span>
-                  </div>
-                  {index < howItWorks.length - 1 && (
-                    <ArrowDown className="hidden md:block absolute top-10 -right-4 h-6 w-6 text-gray-400" />
-                  )}
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900">{step.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-      {/* Testimonials */}
-      {/* <section className="py-20 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Trusted by Indian Entrepreneurs
-            </h2>
-            <p className="text-xl text-gray-600">
-              See what our customers have to say about DigiSetu
-            </p>
-          </div>
-
-          <Carousel className="w-full">
-            <CarouselContent>
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index}>
-                  <Card className="border-0 shadow-lg">
-                    <CardContent className="p-8 text-center">
-                      <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span className="text-lg font-semibold text-orange-600">
-                          {testimonial.avatar}
-                        </span>
-                      </div>
-                      <blockquote className="text-lg italic text-gray-700 mb-6 leading-relaxed">
-                        "{testimonial.content}"
-                      </blockquote>
-                      <div>
-                        <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                        <div className="text-gray-600">{testimonial.role}</div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-        </div>
-      </section> */}
-
-      <PricingDemo />
-
-      <TestimonialsDemo />
-
-      {/* Trust Section */}
-      {/* <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Enterprise-Grade Security & Compliance
-            </h2>
-            <p className="text-xl text-gray-600">
-              Your data and transactions are protected by industry-leading security standards
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <Card className="text-center border-0 shadow-md">
-              <CardContent className="p-8">
-                <Shield className="h-12 w-12 text-green-500 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">PCI DSS Compliant</h3>
-                <p className="text-gray-600">Level 1 PCI DSS certified for maximum security</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="text-center border-0 shadow-md">
-              <CardContent className="p-8">
-                <CreditCard className="h-12 w-12 text-blue-500 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">ISO 27001</h3>
-                <p className="text-gray-600">Information security management certified</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="text-center border-0 shadow-md">
-              <CardContent className="p-8">
-                <CalendarCheck className="h-12 w-12 text-purple-500 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">RBI Guidelines</h3>
-                <p className="text-gray-600">Fully compliant with Indian banking regulations</p>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="text-center">
-            <p className="text-gray-600 mb-8">Trusted by leading Indian companies</p>
-            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-              <div className="bg-gray-200 px-6 py-3 rounded-lg font-semibold">TechCorp</div>
-              <div className="bg-gray-200 px-6 py-3 rounded-lg font-semibold">StartupHub</div>
-              <div className="bg-gray-200 px-6 py-3 rounded-lg font-semibold">EcoMart</div>
-              <div className="bg-gray-200 px-6 py-3 rounded-lg font-semibold">FinanceFlow</div>
-            </div>
-          </div>
-        </div>
-      </section> */}
+      {/* Pricing Section */}
+      <section id="pricing">
+        <PricingDemo />
+      </section>
 
       <FooterDemo />
     </div>

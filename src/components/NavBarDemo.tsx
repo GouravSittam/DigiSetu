@@ -3,10 +3,10 @@ import { NavBar } from "@/components/ui/tubelight-navbar"
 
 export function NavBarDemo() {
   const navItems = [
-    { name: 'Home', url: '#', icon: Home },
-    { name: 'Features', url: '#', icon: User },
-    { name: 'Solutions', url: '#', icon: Briefcase },
-    { name: 'Pricing', url: '#', icon: FileText }
+    { name: 'Home', url: '#home', icon: Home },
+    { name: 'Features', url: '#features', icon: User },
+    { name: 'Solutions', url: '#solutions', icon: Briefcase },
+    { name: 'Pricing', url: '#pricing', icon: FileText }
   ]
 
   return <NavBar items={navItems} />
