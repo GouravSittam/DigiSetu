@@ -4,7 +4,7 @@
 
 DigiSetu is India's next-generation payment gateway built for speed, trust, and scale. Seamlessly connect businesses with customers through secure digital payments.
 
-**🌐 Live Demo**: [Coming Soon]
+**🌐 Live Demo**: [https://digisetu.vercel.app/]
 
 ## ✨ Features
 
