@@ -61,11 +61,11 @@ export function FooterDemo() {
       socialLinks={[
         {
           name: "Twitter",
-          href: "https://x.com/raymethula",
+          href: "https://x.com/Gouravv_c",
         },
         {
           name: "Github",
-          href: "https://github.com/serafimcloud",
+          href: "https://github.com/GouravSittam",
         },
         {
           name: "Discord",
@@ -104,17 +104,17 @@ export function FooterDemo() {
             {
               name: "Plausible",
               Icon: PlausibleIcon,
-              href: "/compare/plausible",
+              href: "#",
             },
             {
               name: "Matomo",
               Icon: MatomoIcon,
-              href: "/compare/matomo",
+              href: "#",
             },
             {
               name: "Google Analytics",
               Icon: GoogleAnalyticsIcon,
-              href: "/compare/google-analytics",
+              href: "#",
             },
           ],
         },
@@ -124,12 +124,12 @@ export function FooterDemo() {
             {
               name: "Privacy Policy",
               Icon: Scale,
-              href: "/legal/privacy",
+              href: "#",
             },
             {
               name: "Terms of Service",
               Icon: Handshake,
-              href: "/legal/terms",
+              href: "#",
             },
           ],
         },
